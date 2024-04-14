@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useRef } from "react";
-const Form = ({setQuery, query}) => {
+const Form = ({setQuery}) => {
 
     const formRef = useRef()
   
