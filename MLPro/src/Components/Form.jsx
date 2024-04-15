@@ -28,7 +28,7 @@ const Form = ({setQuery}) => {
   });
 
   const onSubmit = (data) => {  
-    console.log(data)
+    // console.log(data)
     formRef.current.reset()
     setQuery(data);
   };
