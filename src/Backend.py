@@ -3,10 +3,6 @@ import pickle
 from InferenceAgain import Inference
 from flask_cors import CORS
 
-
-
-
-
 app = Flask(__name__)
 
 CORS(app)
@@ -24,8 +20,10 @@ inference = Inference(model, scaler)
 
 @app.route('/pred', methods=['POST'])
 def pred():
+    print("method called")
     data = request.json
     prediction = inference.predict(data)
+    print(prediction)
     return jsonify({"prediction": prediction})
 
 

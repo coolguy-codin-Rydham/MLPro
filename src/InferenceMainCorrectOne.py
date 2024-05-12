@@ -38,7 +38,7 @@ class Inference:
         return df_days
     def users_input(self):
         print("Enter correct information to predict Rented by count for a day with respect to time: ")
-        date_str = input("Enter Date(dd/mm/yy): ")
+        date_str = input("Enter Date(dd/mm/yyyy): ")
         hour = int(input("Enter Hour(0-23): "))
         temperature = float(input("Enter Temperature in C: "))
         humidity = float(input("Enter Humidity: "))
