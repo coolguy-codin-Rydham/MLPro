@@ -12,7 +12,7 @@ class Inference:
             self.model = pickle.load(open(model_path, "rb"))
             self.sc = pickle.load(open(sc_path, "rb"))
         else:
-            print("Model Or SC is not Correct")
+            print("Model Or SC is not Correct")#hahahahah
 
 
     def get_string_to_datetime(self, Date):
