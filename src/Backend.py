@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import pickle
 from InferenceAgain import Inference
 from flask_cors import CORS
@@ -18,13 +18,13 @@ with open(r"D:\codes\vscode codes\vscode codes\AI\Project\Models\sc.pkl", "rb") 
 
 inference = Inference(model, scaler)
 
-@app.route('/pred', methods=['POST'])
+@app.route('/', methods=['POST'])
 def pred():
     print("method called")
     data = request.json
     prediction = inference.predict(data)
     print(prediction)
-    return jsonify({"prediction": prediction})
+    return render_template('form.html')
 
 
 @app.route('/red', methods=['GET'])
